@@ -1,68 +1,55 @@
-import { Request, Response } from "express"
-import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt'
+import { Request, Response } from 'express';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
+import Users from '../models/Users';
 
 export const login = async (req: Request, res: Response) => {
-    const {username, password} = req.body
-    if (username === undefined || password === undefined) {
-        res.status(400).json({message: 'username and password are required'})
-        return
-    }
+  const { username, password } = req.body;
 
-    const hashedPassword = "$2b$10$WoiGUJIU1IB5VarJOe468eae0wHxD53MI9PJta2ohnBam2R72Kc2S"
+  try {
+    const user = await Users.findOne({ username });
+    if (!user) return res.status(400).json({ message: 'Invalid credentials' });
 
-    const isLoggedIn = await bcrypt.compare(password, hashedPassword)
-    if (username === 'admin' && password === '123') {
-        const accessToken = jwt.sign({username}, process.env.JWT_SECRET || "", {expiresIn: '7d'});
-        console.log(accessToken)
+    const isLoggedIn = await bcrypt.compare(password, user.password);
+    if (!isLoggedIn) return res.status(400).json({ message: 'Invalid credentials' });
 
+    const accessToken = jwt.sign({ username }, process.env.JWT_SECRET || '', { expiresIn: '7d' });
 
-        res.cookie('accessToken', accessToken, {
-            // Prevents client-side JavaScript from accessing the cookie (e.g. document.cookie).
-            // This protects against XSS attacks where malicious scripts try to steal the token.
-            httpOnly: true, // JS has no access to the cookie
+    res.cookie('accessToken', accessToken, {
+      httpOnly: true,
+      secure: false,
+      sameSite: 'lax',
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+    });
 
-            // When true, the cookie is only sent over HTTPS connections.
-            // We enable this in production (where we use HTTPS) but disable it locally (HTTP).
-            secure: false, 
+    res.json({ message: 'You are logged in', isLoggedIn: isLoggedIn, accessToken: accessToken });
+    return;
+  } catch (error) {
+    res.status(500).json({ message: 'Username/password are wrong' });
+    return;
+  }
+};
 
-            // Controls when the cookie is sent with cross-site requests.
-            // 'none': Cookie is sent on all cross-origin requests (required when frontend and API are on different domains in production). Requires secure: true.
-            // 'lax': Cookie is sent on same-site requests and top-level navigations (safe default for local development).
-            sameSite: 'lax',
-
-            // How long the cookie lives in the browser, in milliseconds.
-            // After this time the browser automatically deletes the cookie and the user must log in again.
-            maxAge: 1000 * 60 * 60 * 24 * 7 // Lives on for 7 days
-        })
-        res.json({message: 'You are logged in', isLoggedIn: isLoggedIn})
-        return;
-    } else {
-        res.status(401).json({message: 'username/password are wrong'})
-        return
-    }
-}
 
 export const register = async (req: Request, res: Response) => {
-    const {username, password} = req.body
-    if (username === undefined || password === undefined) {
-        res.status(400).json({message: 'username and password are required'})
-        return
-    }
+  const { username, password } = req.body;
 
-    try {
-        const hashedPassword = await bcrypt.hash(password, 10)
+  try {
+    let user = await Users.findOne({ username });
+    if (user) return res.status(400).json({ message: 'Username already exists' });
 
-        // The hashedPassword is the value that should be saved in the DB, not the plain password. For security reasons
-        res.json({message: "You are registered", username: username, password: password, hashedPassword: hashedPassword})
-    } catch (e) {
-        console.log(e)
-    }
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-    
-}
+    user = new Users({ username: username, password: hashedPassword });
+    await user.save();
+
+    res.status(201).json({ message: 'You are registered' });
+  } catch (error) {
+    res.status(500).json({ message: 'Registration is unsuccessful' });
+  }
+};
 
 export const logout = async (req: Request, res: Response) => {
-    res.clearCookie('accessToken')
-    res.json({message: "You are logged out"})
-}
+  res.clearCookie('accessToken');
+  res.json({ message: 'You are logged out' });
+};
