@@ -17,3 +17,23 @@ export const createBook = async (req: any, res: any) => {
     res.status(500).json({ message: 'Error creating book' });
   }
 };
+
+export const updateBook = async (req: any, res: any) => {
+
+  try {
+
+    const book = await Book.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    res.json(book);
+
+  } catch (error) {
+
+    res.status(500).json({ message: 'Error updating book' });
+
+  }
+
+};
