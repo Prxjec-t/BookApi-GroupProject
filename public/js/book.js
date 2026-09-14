@@ -3,14 +3,9 @@
 //   book.html?id=6650f0c1a2b3c4d5e6f70000
 // We use that id both to load the book and to load/create its reviews.
 
-const bookId = new URLSearchParams(window.location.search).get("id");
+renderNavbar("books");
 
-// Small helper so user-supplied text (reviews, titles) can't inject HTML.
-function escapeHtml(value) {
-  const div = document.createElement("div");
-  div.textContent = value == null ? "" : String(value);
-  return div.innerHTML;
-}
+const bookId = new URLSearchParams(window.location.search).get("id");
 
 // --- Load and render the book itself -------------------------------------
 // GET /api/books/:id is Ansvarsområde 2's endpoint. If it is not available yet
