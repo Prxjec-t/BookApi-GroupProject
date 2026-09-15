@@ -54,3 +54,19 @@ export const updateUser = async (req: Request, res: Response) => {
     res.status(500).json({message: 'Unknown error'})
   }
 }
+
+export const deleteUser = async (req: Request, res: Response) => {
+  const id = req.params.id as string
+
+  try {
+    const result = await Users.deleteOne({ _id: id })
+    if (result.deletedCount === 0) {
+      res.status(404).json({message: 'User not found'})
+      return
+    }
+
+    res.json({message: 'User deleted', result: result})
+  } catch (error: unknown) {
+    res.status(500).json({message: 'Unknown error'})
+  }
+}
