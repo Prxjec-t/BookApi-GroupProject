@@ -4,9 +4,9 @@ import { deleteUser, fetchAllUsers, fetchUser, updateUser } from '../controllers
 
 const router = express.Router();
 
-router.get('/', fetchAllUsers, verifyToken);
-router.get('/:id', fetchUser, verifyToken);
-router.patch('/:id', updateUser, verifyToken)
-router.delete('/:id', deleteUser, verifyToken)
+router.get('/', verifyToken, fetchAllUsers );
+router.get('/:id', verifyToken, fetchUser, );
+router.patch('/:id', verifyToken, updateUser, )
+router.delete('/:id', verifyToken, deleteUser, )
 
 export default router;
