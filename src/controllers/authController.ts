@@ -25,7 +25,7 @@ export const login = async (req: Request, res: Response) => {
     res.json({ message: 'You are logged in', isLoggedIn: isLoggedIn, accessToken: accessToken });
     return;
   } catch (error) {
-    res.status(500).json({ message: 'Username/password are wrong' });
+    res.status(401).json({ message: 'Username/password are wrong' });
     return;
   }
 };
@@ -36,7 +36,7 @@ export const register = async (req: Request, res: Response) => {
 
   try {
     let user = await Users.findOne({ username });
-    if (user) return res.status(400).json({ message: 'Username already exists' });
+    if (user) return res.status(409).json({ message: 'Username already exists' });
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
