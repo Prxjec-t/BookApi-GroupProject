@@ -27,6 +27,15 @@ const BookSchema = new Schema({
     type: Number,
     required: true
   }
+}, {
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
+});
+
+BookSchema.virtual('reviews', {
+  ref: 'Review',
+  localField: '_id',
+  foreignField: 'book_id'
 });
 
 export default mongoose.model('books', BookSchema);
