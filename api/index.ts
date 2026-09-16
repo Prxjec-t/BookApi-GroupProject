@@ -77,9 +77,14 @@ app.use(express.static(path.join(process.cwd(), 'public')));
 // Routes
 import authRouter from '../src/routes/auth'
 import greetingRouter from '../src/routes/greetings'
+import reviewRouter from '../src/routes/reviews'
 import userRouter from '../src/routes/users'
+import bookRouter from '../src/routes/books'
+
 app.use('/api/auth', authRouter)
 app.use('/api/greetings', greetingRouter)
+app.use('/api/reviews', reviewRouter)
+app.use('/api/books', bookRouter)
 app.use('/api/users', userRouter)
 
 
@@ -88,11 +93,16 @@ app.use('/api/users', userRouter)
 import mongoose from 'mongoose';
 mongoose.connect(process.env.MONGODB_URL || "");
 
-// Start the express server
-const PORT = 3000
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`)
-})
+// Start the express server locally. On Vercel there is no long-running server:
+// Vercel imports this file and calls the exported app for each request.
+if (!process.env.VERCEL) {
+  const PORT = 3000
+  app.listen(PORT, () => {
+    console.log(`Server is running at http://localhost:${PORT}`)
+  })
+}
+
+export default app;
 
 
 
