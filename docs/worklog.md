@@ -1,7 +1,45 @@
 # Worklog — Book API (client part)
 
-My area of responsibility: **section "3 - Klientens olika sidor"** (all client pages).
+My area of responsibility (clarified in group chat): **Ansvarsområde 3 = reviews**, the full vertical
+across all 3 categories (table + endpoints + client). Division is VERTICAL:
+- Amanda = område 2 (books), Kimi = område 1 (users), me = område 3 (reviews).
+I also built the client pages for områden 1 & 2 as help for the group (bonus, not my grading area).
 Branch: `Klientens_olika_sidor`.
+
+---
+
+## 🟢 SESSION 2026-09-15 — DB inspection + integration understanding
+
+### DONE (this session)
+- Confirmed division with group: VERTICAL. I own **reviews (område 3)** — done in all 3 categories
+  (`src/models/Review.ts`, `src/routes/reviews.ts` + `src/controllers/reviewController.ts`, `public/book.html` + `book.js`).
+- Inspected the shared MongoDB Atlas (`book-api` db). Current data:
+  - `books`: 1 doc ("The Shining" – Stephen King, 1977)
+  - `users`: 4 docs
+  - `reviews`: 0 docs (empty)
+- Key insight: DATA exists but **books/users API code is NOT on main yet** — Amanda's `/api/books`
+  CRUD (område 2) is unpushed; main only has empty `Book.ts` + Vercel config.
+- Created helper `check-db.mjs` (project root) — connects with `MONGODB_URL` and prints collections
+  + document contents. Run: `npx tsx check-db.mjs`. Personal tool, no secrets, safe to delete.
+- Sent Amanda a message asking her to merge her books endpoints into main.
+- Learned/covered: express.Router() has no URL/domain; prefix set by `app.use('/api/reviews', ...)`,
+  port by `app.listen(3000)`, host (localhost) is implicit. Direct-DB vs through-API access paths.
+
+### 🔜 NEXT STEPS (continue here)
+1. **Merge my branch to main** — still NOT done. Told Amanda I would ("Jag kan pusha allt... merga in i main").
+   Do via PR or `git checkout main && git merge Klientens_olika_sidor && git push`.
+2. **Wait for Amanda to push books API (område 2)** to main → then `git pull` → my book pages light up.
+   Watch for `GET /api/books` and `GET /api/books/:id` (the latter must return book + its reviews —
+   this is the books↔reviews "koppling" Amanda wants to do together).
+3. **Wait for Kimi to push users API + real register (område 1)** → admin user table + register will work.
+4. Optional NOW: spin up a TEMPORARY local `/api/books` to preview "The Shining" on my own page and
+   test my review flow end-to-end (POST review → lands in the empty reviews collection). Offered, not done.
+5. Add README.md (still missing) + make sure everyone's git contributions are visible (OBS 1) + Dagbok.
+
+### ⚠️ Open questions / waiting on
+- Books API (Amanda) and Users API + persistent register (Kimi) not on main yet.
+- `src/models/Book.ts` is EMPTY on main.
+- Backend login still only works for hardcoded `admin/123`; register does not persist (område 1).
 
 ---
 
