@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "6aa29e61aab870a190424f0d"
+  },
+  "title": "The Shining",
+  "description": "The Shining is a psychological horror story about a family that moves into an isolated mountain hotel for the winter, where evil spirits drive the father into a homicidal madness.",
+  "author": "Stephen King",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780307743657-L.jpg",
+  "published_year": 1977,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab93b3267ca1c95f5854ab"
+  },
+  "title": "The Seven Husbands of Evelyn Hugo",
+  "description": "Aging Hollywood icon Evelyn Hugo finally decides to tell the story of her glamorous and scandalous life to an unknown journalist, revealing the truth behind her seven marriages and her greatest love.",
+  "author": "Taylor Jenkins Reid",
+  "genres": [
+    "Historical Fiction",
+    "Romance",
+    "Drama"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9781501161933-L.jpg",
+  "published_year": 2017,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9414267ca1c95f5854ae"
+  },
+  "title": "The Haunting of Hill House",
+  "description": "Four strangers gather at the mysterious Hill House to investigate its supernatural reputation. As unsettling events unfold, Eleanor begins to feel an increasingly disturbing connection to the house.",
+  "author": "Shirley Jackson",
+  "genres": [
+    "Horror",
+    "Gothic Fiction",
+    "Mystery"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780143039983-L.jpg",
+  "published_year": 1959,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9803267ca1c95f5854be"
+  },
+  "title": "The Hunger Games",
+  "description": "In the nation of Panem, the Capitol forces twelve districts to send children into a televised fight to the death. When sixteen-year-old Katniss Everdeen volunteers to take her younger sister’s place, she enters an arena where survival depends on strategy, alliances and impossible choices. But her actions may spark something far bigger than the Games themselves.",
+  "author": "Suzanne Collins",
+  "genres": [
+    "Dystopian Fiction",
+    "Science Fiction",
+    "Young Adult",
+    "Adventure"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780439023481-L.jpg",
+  "published_year": 2008,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab984b267ca1c95f5854c1"
+  },
+  "title": "The Great Gatsby",
+  "description": "In the glittering world of 1920s New York, mysterious millionaire Jay Gatsby throws extravagant parties in the hope of reuniting with Daisy Buchanan, the woman he has never stopped loving. Through the eyes of his neighbour Nick Carraway, a story unfolds about obsession, wealth and the dangerous illusion that the past can be recreated.",
+  "author": "F. Scott Fitzgerald",
+  "genres": [
+    "Classic Fiction",
+    "Literary Fiction",
+    "Drama",
+    "Romance"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg",
+  "published_year": 1925,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9895267ca1c95f5854c4"
+  },
+  "title": "The Da Vinci Code",
+  "description": "When a curator is murdered inside the Louvre, symbologist Robert Langdon is drawn into a dangerous investigation alongside cryptologist Sophie Neveu. A trail of hidden messages leads them through famous works of art, ancient secrets and a conspiracy that powerful people are determined to protect.",
+  "author": "Dan Brown",
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Crime",
+    "Adventure"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg",
+  "published_year": 2003,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab98ee267ca1c95f5854c7"
+  },
+  "title": "Pride and Prejudice",
+  "description": "Elizabeth Bennet is intelligent, outspoken and determined to marry for love rather than money. When she meets the wealthy but seemingly arrogant Mr Darcy, their mutual dislike creates a series of misunderstandings. As family pressures and social expectations threaten their futures, both must confront their own pride and prejudice.",
+  "author": "Jane Austen",
+  "genres": [
+    "Classic Fiction",
+    "Romance",
+    "Historical Fiction",
+    "Social Satire"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg",
+  "published_year": 1813,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab99b1267ca1c95f5854ca"
+  },
+  "title": "The Devil Wears Prada",
+  "description": "Fresh out of college, Andrea Sachs lands a job as assistant to Miranda Priestly, the powerful editor of a prestigious fashion magazine. What seems like a dream opportunity quickly becomes a demanding world of impossible expectations, glamorous events and difficult choices about ambition and personal happiness.",
+  "author": "Lauren Weisberger",
+  "genres": [
+    "Contemporary Fiction",
+    "Comedy",
+    "Chick Lit",
+    "Drama"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780767914765-L.jpg",
+  "published_year": 2003,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9a2a267ca1c95f5854cd"
+  },
+  "title": "1984",
+  "description": "In a totalitarian society where Big Brother watches every move, Winston Smith secretly begins to question the Party's control over truth, history and individual freedom. As he searches for love and a life beyond constant surveillance, even his private thoughts become dangerous.",
+  "author": "George Orwell",
+  "genres": [
+    "Dystopian Fiction",
+    "Science Fiction",
+    "Political Fiction",
+    "Classic Fiction"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg ",
+  "published_year": 1949,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9a95267ca1c95f5854d0"
+  },
+  "title": "The Complete Poems of Emily Dickinson",
+  "description": "A collection of Emily Dickinson's poetry, exploring love, death, nature, faith and the mysteries of human existence. Through her distinctive voice and unconventional style, Dickinson transforms everyday observations into powerful reflections on life and the world around her.",
+  "author": "Emily Dickinson",
+  "genres": [
+    "Poetry",
+    "Classics",
+    "Literature"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780316184137-L.jpg ",
+  "published_year": 1960,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9bce267ca1c95f5854d6"
+  },
+  "title": "The Girl with the Dragon Tattoo",
+  "description": "Journalist Mikael Blomkvist is hired to investigate the decades-old disappearance of a young woman from a wealthy Swedish family. With the help of brilliant hacker Lisbeth Salander, he uncovers a disturbing trail of secrets, corruption and violence.",
+  "author": "Stieg Larsson",
+  "genres": [
+    "Crime",
+    "Mystery",
+    "Thriller"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780307454546-L.jpg",
+  "published_year": 2005,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9c7e267ca1c95f5854d9"
+  },
+  "title": "The Hitchhiker’s Guide to the Galaxy",
+  "description": "When Earth is unexpectedly demolished to make way for an intergalactic highway, Arthur Dent is rescued by his alien friend Ford Prefect. Armed with a towel and a peculiar guidebook, Arthur embarks on a wildly unpredictable journey through space, encountering eccentric aliens, a deeply depressed robot and the answer to life, the universe and everything.",
+  "author": "Douglas Adams",
+  "genres": [
+    "Science Fiction",
+    "Comedy",
+    "Adventure"
+  ],
+  "image": "https://covers.openlibrary.org/b/isbn/9780345391803-M.jpg",
+  "published_year": 1979,
+  "__v": 0
+}]

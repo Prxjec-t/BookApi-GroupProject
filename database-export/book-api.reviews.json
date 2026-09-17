@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "6aaa5dfad7cf6d791f11bd8a"
+  },
+  "name": "Alex",
+  "content": "Top ",
+  "rating": 5,
+  "book_id": {
+    "$oid": "6aa29e61aab870a190424f0d"
+  },
+  "created_at": {
+    "$date": "2026-09-16T09:14:34.818Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9f66267ca1c95f5854f7"
+  },
+  "name": "Amanda",
+  "content": "Bra!",
+  "rating": 4,
+  "book_id": {
+    "$oid": "6aab93b3267ca1c95f5854ab"
+  },
+  "created_at": {
+    "$date": "2026-09-17T08:05:58.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab9fd5267ca1c95f5854fe"
+  },
+  "name": "Åke",
+  "content": "Spännande!",
+  "rating": 5,
+  "book_id": {
+    "$oid": "6aab9895267ca1c95f5854c4"
+  },
+  "created_at": {
+    "$date": "2026-09-17T08:07:49.281Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aaba2bf267ca1c95f585508"
+  },
+  "name": "James",
+  "content": "A beautifully written and unsettling ghost story!",
+  "rating": 5,
+  "book_id": {
+    "$oid": "6aab9414267ca1c95f5854ae"
+  },
+  "created_at": {
+    "$date": "2026-09-17T08:20:15.804Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aaba370267ca1c95f585517"
+  },
+  "name": "Lars",
+  "content": "Köpte den till barnbarnet. Hon verkade nöjd.",
+  "rating": 3,
+  "book_id": {
+    "$oid": "6aab99b1267ca1c95f5854ca"
+  },
+  "created_at": {
+    "$date": "2026-09-17T08:23:12.344Z"
+  },
+  "__v": 0
+}]

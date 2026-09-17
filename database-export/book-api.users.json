@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6aaa67289013269936c38cae"
+  },
+  "username": "user",
+  "password": "$2b$10$Uot74l9pkjcMqZqci2EZ7uaMbenOJ50K1S2hNwo89x1UGQ7C19WzW",
+  "is_admin": true,
+  "created_at": {
+    "$date": "2026-09-16T09:53:44.679Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab10b4293937d5181f37ca"
+  },
+  "username": "admin",
+  "password": "$2b$10$vEX0fR1knIde65cbm87X5ehiQJUU4s5BP5qG3SjBbfxGPGdapyw5m",
+  "is_admin": true,
+  "created_at": {
+    "$date": "2026-09-16T21:57:08.589Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aab908f267ca1c95f5854a1"
+  },
+  "username": "Amanda",
+  "password": "$2b$10$5okD/lxwsnSPKQncZR5uEu1lOuWmYRbZG5B0ksZLAu1wIl8SKl4A6",
+  "is_admin": true,
+  "created_at": {
+    "$date": "2026-09-17T07:02:39.859Z"
+  },
+  "__v": 0
+}]
