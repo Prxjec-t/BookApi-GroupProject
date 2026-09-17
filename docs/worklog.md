@@ -114,3 +114,9 @@ Jag testade också registrering, inloggning och utloggning efter att Kimis del h
 Inför inlämningen exporterade jag MongoDB-samlingarna `users`, `books` och `reviews` så att testdatan kunde följa med projektet.
 
 ---
+
+## Kimi Leminaho - Arbetsdagbok
+### Min del - users
+Jag ansvarde för att se till så man kan ha en tabell på alla users som existerar i databasen, jag ansvarde även för att skapa en register, login och logout. Jag arbetade inte bara med att fixa en databas för users utan fixade även funktioner för att fånga alla, en specifik, uppdatera och radera users. Efter ett missförstånd så gjordes min del av klienten av Alexander men vad jag kan se så stämmer det med uppgiftsbeskrivningen och körs som det ska så hittade ingen anledning att göra om osv. 
+### Testning
+För att testa endpointsen så använde jag Insomnia för att se till så man kan registrera, logga in och logga ut, men även så man faktiskt kan GET all users och en specifik user med id som funkade. Funktionen att uppdatera och radera users gick även. 
