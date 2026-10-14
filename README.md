@@ -1,6 +1,6 @@
 # Book API
 
-A group project developed by Alexander Gerhard, Amanda Andersson and Kimi Leminaho as part of our Frontend Developer education at Medieinstitutet.
+A group project developed by [Alexander Gerhard](https://github.com/alexgeho), [Amanda Andersson](https://github.com/amanda-andersson) and Kimi Leminaho as part of our Frontend Developer education at Medieinstitutet.
 
 A web application where users can browse books, read and write reviews, and log in to access protected features.
 
